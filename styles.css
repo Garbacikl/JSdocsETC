@@ -1,0 +1,693 @@
+/*
+
+gwiazdka
+
+## Styl Strony
+
+- Rozmiar pudelka:border-box.
+- Zerowanie marginesu i paddingu dla body.
+
+Style guide: gwiazdka
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+
+html
+
+## Style dla html
+- Szerokosc i wysokosc:100%.
+
+* Style guide: html
+*/
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* 
+
+body 
+
+## Style dla body 
+-Czcionka:'Arial', sans-serif.
+-Kolor tła: #abcbff.
+-Margin:0px.
+-Diplay:flex.
+-Flex-direction:column.
+-Wysrodkowanie itemow.
+
+* Style guide: body
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #abcbff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/*
+
+Animacja success
+
+## Animacje successAnimation
+
+- Skalowanie: 0.8 dla 0% i 100%, 1 dla 50%.
+- Kolor tekstu: #45a049.
+
+Style guide: successAnimation
+
+ */
+@keyframes successAnimation {
+    
+    0% {
+        transform: scale(0.8);
+        color: #45a049;
+    }
+    50% {
+        transform: scale(1);
+        color: #45a049;
+    }
+    100% {
+        transform: scale(0.8);
+        color: #45a049;
+    }
+}
+
+/*
+
+Animacja fail
+
+## Animacje failAnimation
+
+- Skalowanie: 0.8 dla 0% i 100%, 1 dla 50%.
+- Kolor tekstu: rgb(251, 56, 92).
+
+Style guide: failAnimation
+
+ */
+@keyframes failAnimation {
+    0% {
+        transform: scale(0.8);
+        color: rgb(251, 56, 92);
+    }
+    50% {
+        transform: scale(1);
+        color: rgb(251, 56, 92);
+    }
+    100% {
+        transform: scale(0.8);
+        color: rgb(251, 56, 92);
+    }
+}
+
+/*
+
+Animacja brakOdpowiedzi
+
+## Animacje brakOdpowiedziAnimation
+
+- Skalowanie: 0.8 dla 0% i 100%, 1 dla 50%.
+- Kolor tekstu: rgb(235, 187, 66).
+
+Style guide: brakOdpowiedziAnimation
+
+ */
+@keyframes brakOdpowiedziAnimation {
+    0% {
+        transform: scale(0.8);
+        color: rgb(235, 187, 66);
+    }
+    50% {
+        transform: scale(1);
+        color: rgb(235, 187, 66);
+    }
+    100% {
+        transform: scale(0.8);
+        color: rgb(235, 187, 66);
+    }
+}
+/* 
+
+message
+
+## Styl Zawartości message
+- Poczatkowo ukryte
+- Pozycja: flex, wyśrodkowana.
+- Margin-top: 20px.
+- Wysokosc: 40px
+- Tło: białe.
+- Rozmiar tekstu:26px.
+- Tekst: wyśrodkowany,pogrubiony.
+
+Style guide: message
+
+*/
+#message {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    margin-top: 20px;
+    justify-content: center; 
+    display: flex;
+}
+
+/* 
+
+menu
+
+## Styl Zawartości menu
+- Pozycja: flex, wyśrodkowana.
+- Margin-top: 20px.
+- Szerokosc: 100%.
+- Wysokosc: 50px.
+- Tło: #333.
+- Rozmiar tekstu:26px.
+- Tekst: wyśrodkowany,pogrubiony.
+
+Style guide: menu
+*/
+#menu {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+
+menuUL
+
+## Styl Zawartości menuUL
+- Styl listy: brak.
+- Margin:0.
+- Padding:0.
+
+Style guide: menuUL
+*/
+.menuUL {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+
+menuLI
+
+## Styl Zawartości menuLI
+- Kolor tła : #444.
+- Display: inlineblock.
+- Pozzycja: relative.
+- Szerokosc:120px.
+- Tekst: wysrodkowany.
+
+Style guide: menuLI
+*/
+.menuLI {
+    background-color: #444;
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    text-align: center;
+}
+
+/*
+
+menuLI>a
+
+ ## Styl Zawartości menuLI>a
+- Dekoracja tekstu:brak.
+- Display: block.
+- Tekst: biały.
+- Padding: 5px
+Style guide: menuLI>a
+*/
+.menuLI a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+/*
+
+menuLI:hover
+
+## Styl Zawartości menuLI:hover
+- Kolor tła: #6a6a6a.
+Style guide: menuLI:hover
+*/
+.menuLI:hover {
+    background-color: #6a6a6a;
+}
+/* 
+
+menuLI>ol
+
+## Styl Zawartości menuLI>ol
+- Poczatkowo zakryta.
+- Pozycja: absolute.
+- Kolor tła: #333.
+- Padding: 10px.
+- Top: 100%.
+- Text przesuniety do lewej.
+-Szerokosc: 120px.
+Style guide: menuLI:hover
+*/
+.menuLI ol {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #333;
+    padding: 10px;
+    width: 120px;
+    text-align: left;
+}
+/* 
+
+menuLI:hover>ol
+
+## Styl Zawartości menuLI:hover>ol
+- Odkrywa menuLI>ol.
+Style guide: menuLI:hover>ol
+*/
+.menuLI:hover ol {
+    display: block;
+}
+/* 
+
+menuLI>ol>li
+
+## Styl Zawartości menuLI>ol>li
+- Ustawia szerokosc: 100%.
+- Margin-bottom:5px.
+Style guide: menuLI>ol>li
+*/
+.menuLI ol li {
+    width: 100%;
+    margin-bottom: 5px;
+}
+/* 
+
+start-content
+
+## Styl Zawartości start-content
+-   Wysrodkowanie tekstu.
+-    Kolor tła: #7babff.
+-    padding: 20px.
+    -Zaokraglenie ramki:10px.
+    -Cień: 0 0 10px rgba(0, 0, 0, 0.1).
+    -Ramka: 2px solid #5895ff.
+    -Margin: 10px.
+    -Szerokosc: 50%.
+    -Wysokosc: 40%.
+Style guide: start-content
+*/
+.start-content {
+
+    text-align: center;
+    background-color: #7babff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #5895ff;
+    margin: 10px; 
+    width: 50%;
+    height: 40%;
+}
+/* 
+
+username
+
+## Styl Zawartości username
+-   Wysrodkowanie tekstu.
+-    Kolor tła: #7babff.
+-    Display: block.
+    -Zaokraglenie ramki:10px.
+    -Ramka: solid 2px #5895ff.
+    -Margin: 10px auto.
+    -Szerokosc: 60%.
+Style guide: username
+*/
+#username {
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: 10px auto; 
+    border-radius: 10px;
+    border: solid 2px #5895ff;
+}
+
+/* 
+
+movie-content
+
+## Styl Zawartości movie-content
+-   Wysrodkowanie tekstu.
+-    Poczatkowo ukryte.
+    -Ramka: solid 2px #5895ff.
+    -Margin-top: 10px.
+    -Margin:0 auto.
+    -Wysokosc: 450px.
+    -Szerokosc:60%.
+Style guide: movie-content
+*/
+#movie-content {
+    margin-top: 10px;
+    width: 60%;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;  /* Ustawienie marginesu na auto automatycznie centruje element w poziomie */
+}
+
+/* 
+
+content-container
+
+## Styl Zawartości content-container
+    -Display:flex.
+Style guide: content-container
+*/
+.content-container {
+    display: flex;
+}
+
+/* 
+
+quiz-container
+
+## Styl Zawartości quiz-container
+    -Wysrodkowanie tekstu.
+    -Poczatkowo ukryte.
+    -Zaokraglenie ramki:10px.
+    -Kolor tła:#7babff.
+    -Cien:0 0 10px rgba(0, 0, 0, 0.1).
+    -Szerokosc: 520px.
+    -Wysokosc: 450px.
+    -Margin-right:5px.
+Style guide: quiz-container
+*/
+.quiz-container {
+    text-align: center;
+    background-color: #7babff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 5px; 
+    width: 520px;
+    height: 450px;
+}
+
+/* 
+
+img
+
+## Styl Zawartości img
+    -Ramka:2px solid #569dff.
+    -Wysokosc: 60%.
+    -Szerokosc: 90%;
+    -Margin-left: 5%.
+    -Ramka:: 2px solid #569dff.
+    -Zaokraglenie ramki:10px.
+Style guide: img
+*/
+img {
+    width: 90%;
+    height: 60%;
+    margin-left: 5%;
+    border-radius: 10px;
+    border: 2px solid #569dff;
+}
+
+
+/* 
+
+inputOdpowiedzi
+
+## Styl Zawartości inputOdpowiedzi
+    -Ramka:2px solid #569dff.
+    -Wysokosc: 60%.
+    -Margin-left: 20%.
+    -Margin-right:20%.
+    -Ramka:: 2px solid #569dff.
+    -Zaokraglenie ramki:10px.
+
+Style guide: inputOdpowiedzi
+*/
+#movieName, #raperName {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    border: 2px solid #569dff;
+}
+
+
+/* 
+
+result-container
+
+## Styl Zawartości result-container
+    -Ramka:2px solid #569dff.
+    -Szerokosc: 300px.
+    -Padding:10px.
+    -Kolor tła:#7babff.
+    -Zaokraglenie ramki:10px.
+    -Cien: 0 0 10px rgba(0, 0, 0, 0.1).
+Style guide: result-container
+*/
+.result-container {
+    background-color: #7babff; 
+    border-radius: 10px;
+    border: 2px solid #569dff;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 
+
+h2
+
+## Styl Zawartości h2
+    -Kolor tekstu:#333.
+    -Tekst wysrodkowany.
+    -Margines gorny:10px.
+Style guide: h2
+*/
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 
+
+input
+
+## Styl Zawartości input
+    -Szerokosc:100%.
+    -Margin-top: 5px.
+    -Padding:8px.
+    -Rozmiar pudelka: border-box.
+Style guide: input
+*/
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* 
+
+button
+
+## Styl Zawartości button
+    -Kolor tła:#61a3ff.
+    -Ramka:2px solid #569dff. 
+    -Tekst: Biał 16px.
+    -Margin-top: 10px.
+    -Padding:10px 20px.
+    -Zaokraglona ramka:5px.
+Style guide: button
+*/
+.button {
+    background-color: #61a3ff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: 2px solid #569dff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* 
+
+button:hover
+
+## Styl Zawartości button:hover
+    -Kolor tła:#579dff.
+Style guide: button:hover
+*/
+.button:hover {
+    background-color: #579dff;
+}
+
+/* 
+
+tabelaScroll
+
+## Styl Zawartości tabelaScroll
+    -Margines gorny:20px.
+    -overflow-y: auto.
+    -Wysokosc:80%.
+Style guide: tabelaScroll
+*/
+#tabelaScroll {
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 80%;
+}
+
+/* 
+
+table
+
+## Styl Zawartości table
+    -Margines: 0 auto.
+    -Szerokosc:260px.
+Style guide: table
+*/
+table {
+    width: 260px;
+    margin: 0 auto;
+}
+
+/* 
+
+table>thead
+
+## Styl Zawartości table>thead
+    -Tekst:pogrubiony.
+Style guide: table>thead
+*/
+table thead {
+    font-weight: bold;
+}
+
+/* 
+
+table>td
+
+## Styl Zawartości table>td
+    -Ramkal2px solid #5493ff.
+    -Padding:8px.
+    -Tekst wysrodkowany.
+    -Kolor tła:#609afe.
+Style guide: table>td
+*/
+table td {
+    border: 2px solid #5493ff; 
+    padding: 8px; 
+    text-align: center; 
+    background-color: #609afe;
+}
+
+/* 
+
+pokazywanie
+
+## Styl Zawartości pokazywanie
+    -Margin: 0px.
+    -Display: block.
+    -Szerokosc: 20px.
+    -Padding: 0.
+    -Wyskosc:100%.
+    -Poczatkowo schowany.
+Style guide: pokazywanie
+*/
+#pokazywanie {
+    margin: 0px;
+    width: 20px;
+    display: block;
+    padding: 0px;
+    height: 100%;
+}
+
+/*
+
+howanie
+
+## Styl Zawartości howanie
+    -Margin: 0px.
+    -Display: block.
+    -Szerokosc: 20px.
+    -Padding: 0.
+    -Wyskosc:100%.
+Style guide: howanie
+*/
+#howanieee {
+    margin: 0px;
+    width: 20px;
+    padding: 0px;
+    height: 100%;
+}
+
+
+/* 
+
+cytat
+
+## Styl Zawartości cytat
+    -Wysokosc: 250px.
+    -Padding-top: 50px.
+    -Tekst: pochyly, pogrubiony, #333, 20px.
+Style guide: cytat
+*/
+#cytat {
+    padding-top: 50px;
+    height: 250px;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #start-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #menu {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px; 
+    }
+
+   
+}
+
+

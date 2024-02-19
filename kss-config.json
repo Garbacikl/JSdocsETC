@@ -1,0 +1,5 @@
+{
+  "source": "styles.css",
+  "destination": "styleguide/",
+  "css": "styles.css"
+}

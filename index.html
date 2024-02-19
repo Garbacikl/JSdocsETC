@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Film Quiz</title>
+    <script src="scriptRap.js"></script>
+    <script src="scriptMovie.js"></script>
+    <script src="cytaty.js"></script>
+    <script src="scriptCytatyMovie.js"></script>
+</head>
+<body>
+    <!-- MENU -->
+    <div id="menu">
+        <ul class="menuUL">
+            <li class="menuLI" >
+                <a >Filmy</a>
+                <ol class="menuOL">
+                    <li class="menuLI"><a onclick="startMovie()">Quiz Zdjecia</a></li>
+                    <li class="menuLI"><a onclick="startCytatyMovie()">Quiz Cytaty mOVIE</a></li>
+                </ol>
+            </li>
+            <li class="menuLI">
+                <a >Muzyka</a>
+                <ol class="menuOL" >
+                    <li class="menuLI"><a onclick="startRap()">Quiz Zdjecia</a></li>
+                    <li class="menuLI"><a onclick="startCytaty()">Quiz Cytaty</a></li>
+
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <!-- ALERT -->
+    <div id="message"></div>
+
+    <!-- PANEL LOGOWANIA -->
+    <div id="start-content" class="start-content">
+        <h2 id="h2">Quiz z kadrami filmowymi</h2>
+
+        <label for="username">Podaj swoją nazwę:</label>
+        <input type="text" id="username" placeholder="Wprowadź nazwę">
+        <button onclick="startSessionMovie()" class="button" id="buttonMovie" >Rozpocznij quiz</button>
+        <button onclick="startSessionCytatyMovie()" class="button" id="buttonCytatyMovie" style="display: none;">Rozpocznij quiz</button>
+        <button onclick="startSessionCytaty()" class="button" id="buttonCytaty" style="display: none;">Rozpocznij quiz</button>
+        <button onclick="startSessionRap()" class="button" id="buttonRap" style="display: none;">Rozpocznij quiz</button>
+    
+
+    </div>
+
+    <!-- KONTENER QUIZ -->
+    <div id="movie-content" style="display: none;">
+        <div class="content-container">
+            <div class="quiz-container">
+                <h2> QuizUUU TIME</h2>
+                <div class="quiz-content">
+                    <img id="quizImage" alt="Quiz Image" >
+                    <div id="cytat" style="display: none;"></div>
+
+                    <label for="titleInput" id="tytul">Tytuł:</label>
+                    <input type="text" id="movieName" placeholder="Podaj tytuł">
+                    <input type="text" id="raperName" placeholder="Podaj wykonawce" style="display: none;">
+                    <div id="koniec" style="display: none;"></div>
+                    <button onclick="checkAnswerMovie()" class="button" id="buttonAnswerMovie" style="display: none;">Sprawdź</button>
+                    <button onclick="checkAnswerRap()" class="button" id="buttonAnswerRap" style="display: none;">Sprawdź</button>
+                    <button onclick="checkAnswerCytat()" class="button" id="buttonAnswerCytaty" style="display: none;">Sprawdź</button>
+                    <button onclick="checkAnswerCytatMovie()" class="button" id="buttonAnswerCytatyMovie" style="display: none;">Sprawdź</button>
+                    <button onclick="clearLocalStorage()" class="button" id="button2">Clear</button>
+                    <button onclick="getRandomImageMovie()" class="button" id="buttonRandomMovie" style="display: none;">Następny obrazek</button>
+                    <button onclick="getRandomImageRap()" class="button" id="buttonRandomRap" style="display: none;">Następny obrazek</button>
+                    <button onclick="getRandomCytat()" class="button" id="buttonRandomCytaty" style="display: none;">Kolejne wersy</button>
+                    <button onclick="getRandomCytatMovie()" class="button" id="buttonRandomCytatyMovie" style="display: none;">Kolejny cytat</button>
+                
+                </div>
+            </div>
+        </div>
+        <img src="strzalka.png" onclick="showResults()" class="button" id="pokazywanie" style="display: none;"></img>
+        <img src="strzalka.png" onclick="hideResults()" class="button" id="howanieee" style="transform: rotate(180deg);"> </img>
+        <!-- TABELA WYNIKOW -->
+        <div class="result-container" id="tableMovie">
+            <h2>Wyniki</h2>
+            <div id="tabelaScroll">
+                <table id="resultTableMovie">
+                    <thead>
+                        <tr>
+                            <td>Nazwa</td>
+                            <td>Punky</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+        
+
+</body>
+</html>
+
+
+
+
